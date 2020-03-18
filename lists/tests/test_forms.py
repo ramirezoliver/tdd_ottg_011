@@ -17,4 +17,3 @@ class ItemFormTest(TestCase):
             [EMPTY_ITEM_ERROR]
         )
         
- 
