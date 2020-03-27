@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'lists',
-    'accounts'
+    'accounts',
 ]
 
 AUTH_USER_MODEL = 'accounts.ListUser'
