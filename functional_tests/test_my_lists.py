@@ -58,6 +58,7 @@ class MyListsTest(FunctionalTest):
         self.browser.get(self.live_server_url)
         self.add_list_item('Click cows')
         second_list_url = self.browser.current_url
+
         # Under "my lists", her new list appears
         self.browser.find_element_by_link_text('My lists').click()
         self.wait_for(
@@ -67,7 +68,8 @@ class MyListsTest(FunctionalTest):
         self.wait_for(
             lambda: self.assertEqual(self.browser.current_url, second_list_url)
         )
-        # She logs out. The "My lists" option disappears
+
+        # She logs out.  The "My lists" option disappears
         self.browser.find_element_by_link_text('Log out').click()
         self.wait_for(lambda: self.assertEqual(
             self.browser.find_elements_by_link_text('My lists'),
