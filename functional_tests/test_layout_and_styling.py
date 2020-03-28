@@ -1,5 +1,4 @@
 from .base import FunctionalTest
-from selenium.webdriver.common.keys import Keys
 
 class LayoutAndStylingTest(FunctionalTest):
 
@@ -13,4 +12,15 @@ class LayoutAndStylingTest(FunctionalTest):
         inputbox.location['x'] + inputbox.size['width'] / 2,
         512,
         delta=10
+        )
+
+        # She starts a new list and sees the input is nicely
+        # centered there too
+        self.add_list_item('testing')
+
+        inputbox = self.get_item_input_box()
+        self.assertAlmostEqual(
+            inputbox.location['x'] + inputbox.size['width'] / 2,
+            512,
+            delta=6
         )
