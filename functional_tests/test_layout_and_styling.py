@@ -1,5 +1,6 @@
 from .base import FunctionalTest
 
+
 class LayoutAndStylingTest(FunctionalTest):
 
     def test_layout_and_styling(self):
@@ -9,9 +10,9 @@ class LayoutAndStylingTest(FunctionalTest):
         # She notices the input box is nicely centered
         inputbox = self.browser.find_element_by_id('id_text')
         self.assertAlmostEqual(
-        inputbox.location['x'] + inputbox.size['width'] / 2,
-        512,
-        delta=10
+            inputbox.location['x'] + inputbox.size['width'] / 2,
+            512,
+            delta=10
         )
 
         # She starts a new list and sees the input is nicely

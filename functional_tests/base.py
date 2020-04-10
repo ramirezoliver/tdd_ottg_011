@@ -6,8 +6,8 @@ from .server_tools import reset_database
 import time
 import os
 
-
 MAX_WAIT = 5
+
 
 def wait(fn):
     def modified_fn(*args, **kwargs):
@@ -19,6 +19,7 @@ def wait(fn):
                 if time.time() - start_time > MAX_WAIT:
                     raise e
                 time.sleep(0.5)
+
     return modified_fn
 
 

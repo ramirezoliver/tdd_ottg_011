@@ -5,6 +5,7 @@ from accounts.models import Token
 
 User = get_user_model()
 
+
 class AuthenticateTest(TestCase):
 
     def test_returns_None_if_no_such_token(self):

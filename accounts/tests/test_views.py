@@ -4,6 +4,7 @@ from accounts.models import Token
 import django.contrib.auth
 import accounts.views
 
+
 class SendLoginEmailViewTest(TestCase):
 
     def test_redirects_to_home_page(self):
@@ -17,7 +18,7 @@ class SendLoginEmailViewTest(TestCase):
         response = self.client.post(
             '/accounts/send_login_email',
             data={'email': 'edith@example.com'},
-            follow = True
+            follow=True
         )
         message = list(response.context['messages'])[0]
         self.assertEqual(
@@ -56,13 +57,12 @@ class SendLoginEmailViewTest(TestCase):
         self.assertIn(expected_url, body)
 
 
-
 @patch('accounts.views.auth')
 class LoginViewTest(TestCase):
 
-    def test_redirect_to_home_page(self,mock_auth):
+    def test_redirect_to_home_page(self, mock_auth):
         response = self.client.get('/accounts/login?token=abcd123')
-        self.assertRedirects(response,'/')
+        self.assertRedirects(response, '/')
 
     def test_calls_authenticate_with_uid_from_get_request(self, mock_auth):
         self.client.get('/accounts/login?token=abcd123')
@@ -87,6 +87,3 @@ class LoginViewTest(TestCase):
         mock_auth.authenticate.return_value = None
         self.client.get('/accounts/login?token=abcd123')
         self.assertEqual(mock_auth.login.called, False)
-
-
-

@@ -6,6 +6,7 @@ from django.urls import reverse
 from accounts.models import Token
 import sys
 
+
 # Create your views here.
 def send_login_email(request):
     email = request.POST['email']
@@ -20,18 +21,17 @@ def send_login_email(request):
         message_body,
         'noreply@superlists',
         [email]
-         )
+    )
     messages.success(
         request,
         "Check your email, we've sent you a link you can use to log in."
     )
     return redirect('/')
 
+
 def login(request):
     uid = request.GET.get('token')
     user = auth.authenticate(uid)
     if user:
-        auth.login(request,user)
+        auth.login(request, user)
     return redirect('/')
-
-

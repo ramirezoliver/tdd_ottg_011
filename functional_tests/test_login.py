@@ -8,6 +8,7 @@ from .base import FunctionalTest
 
 SUBJECT = 'Your login link for Superlists'
 
+
 class LoginTest(FunctionalTest):
     def wait_for_email(self, test_email, subject):
         if not self.staging_server:
@@ -24,7 +25,7 @@ class LoginTest(FunctionalTest):
             inbox.pass_(os.environ['DUMMY_PASSWORD'])
             while time.time() - start < 60:
 
-             # get 10 newest messages
+                # get 10 newest messages
                 count, _ = inbox.stat()
                 for i in reversed(range(max(1, count - 10), count + 1)):
                     print('getting msg', i)
@@ -41,7 +42,6 @@ class LoginTest(FunctionalTest):
             if email_id:
                 inbox.dele(email_id)
             inbox.quit()
-
 
     def test_can_get_email_link_to_log_in(self):
         # Edith goes to the awesome superlists site
