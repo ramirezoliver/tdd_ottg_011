@@ -2,7 +2,7 @@ from fabric.contrib.files import append, exists, sed
 from fabric.api import env, local, run
 import random
 
-REPO_URL = 'https://github.com/StarPlatinum-17/tdd_ottg_011.git'
+REPO_URL = 'https://github.com/ramirezoliver/tdd_ottg_011'
 
 
 def deploy():
