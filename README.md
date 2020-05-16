@@ -1,7 +1,8 @@
 # tdd_ottg_011
 
-[AUTHOR]
-https://github.com/hjwp/book-example
+Implementation of book Test-Driven Development with Python, 
+https://www.obeythetestinggoat.com/
+
 
 [PROD URL]
 https://ottg-lists-ilo.tk/
