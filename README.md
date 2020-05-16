@@ -1,7 +1,10 @@
 # tdd_ottg_011
 
-[PROD]
+[AUTHOR]
+https://github.com/hjwp/book-example
+
+[PROD URL]
 https://ottg-lists-ilo.tk/
 
-[STAGING]
+[STAGING URL]
 http://ottg-lists-ilo-staging.tk/
