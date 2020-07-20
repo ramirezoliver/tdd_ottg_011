@@ -5,7 +5,7 @@ https://www.obeythetestinggoat.com/
 
 
 [PROD URL]
-https://ottg-lists-ilo.tk/
+~~https://ottg-lists-ilo.tk/~~
 
 [STAGING URL]
-http://ottg-lists-ilo-staging.tk/
+~~http://ottg-lists-ilo-staging.tk/~~
